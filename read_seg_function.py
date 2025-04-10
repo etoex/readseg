@@ -1,3 +1,12 @@
+# перевод code -> level
+letters = "GBRY"
+nums = "1234"
+levels = [ch + num for num, ch in product(nums, letters)]
+level_codes = [2 ** i for i in range(len(levels))]
+
+code_to_level = {i: j for i, j in zip(level_codes, levels)}
+level_to_code = {j: i for i, j in zip(level_codes, levels)}
+
 def read_seg(file_name: str) -> tuple[dict[str, int], list[dict]]:
     """
     Функция считывает параметры и метки из исходного файла  и возвращает их в виде словаря и списка.
