@@ -1,3 +1,5 @@
+from itertools import product
+
 # перевод code -> level
 letters = "GBRY"
 nums = "1234"
